@@ -1,0 +1,97 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #ff9ecf, #ff4d88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Card chứa câu hỏi */
+.card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 350px;
+  max-width: 90%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.love-img {
+  width: 150px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+/* Khung nút */
+.buttons {
+  display: flex;
+  justify-content: space-between; /* Yes trái, No phải, đối xứng */
+  align-items: center;
+  margin-top: 20px;
+  height: 60px; 
+  position: relative; /* để nút No tuyệt đối khi di chuyển */
+}
+
+/* Nút chung */
+button {
+  padding: 10px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* Nút Yes - nằm cố định trái */
+#yes {
+  background: #ff2e7a;
+  color: white;
+  position: relative; /* vẫn dùng flexbox */
+  z-index: 1;
+}
+
+/* Nút No - ban đầu nằm phải, sẽ chuyển sang absolute khi hover */
+#no {
+  background: #ccc;
+  position: relative; /* ban đầu relative để flexbox căn đối xứng */
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+
+/* Hiển thị sau khi bấm Yes */
+.yay-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  background: linear-gradient(135deg, #ff9ecf, #ff4d88);
+}
+
+.yay-container h1 {
+  margin-bottom: 20px;
+  font-size: 3rem;
+  color: white;
+}
+
+.yay-container img {
+  width: 250px;
+  max-width: 90%;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
